@@ -18,8 +18,8 @@
     }
 
     body {
-      background: #f5f9fd;
-      color: #2d3748;
+      background: #f7fbff;
+      color: #2f3b4a;
       line-height: 1.7;
     }
 
@@ -27,10 +27,15 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     /* Header */
     header {
       background: #ffffff;
-      border-bottom: 1px solid #dbe5ef;
+      border-bottom: 1px solid #dfe8f2;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -39,37 +44,39 @@
     .navbar {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 18px 32px;
+      padding: 18px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
-    .logo-area {
+    .brand {
       display: flex;
       align-items: center;
       gap: 14px;
+      min-width: 180px;
     }
 
-    .logo-area img {
+    .brand img {
       width: 34px;
       height: auto;
     }
 
-    .logo-area h1 {
+    .brand span {
       font-size: 18px;
-      color: #173f8a;
       font-weight: 800;
+      color: #173f8a;
     }
 
     .nav-links {
       display: flex;
-      gap: 34px;
       align-items: center;
+      gap: 36px;
     }
 
     .nav-links a {
-      color: #4a5568;
+      color: #4b5563;
       font-size: 16px;
       transition: 0.2s;
     }
@@ -78,19 +85,19 @@
       color: #173f8a;
     }
 
-    .join-btn-top {
-      background: #4fc3e3;
+    .top-btn {
+      background: #57c4e3;
       color: white;
       padding: 12px 24px;
       border-radius: 28px;
       font-weight: 700;
-      display: inline-block;
+      white-space: nowrap;
     }
 
     /* Hero */
     .hero {
-      background: linear-gradient(90deg, #f8fbff 0%, #eef8ff 100%);
       min-height: 92vh;
+      background: linear-gradient(90deg, #f8fbff 0%, #edf8ff 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -99,48 +106,47 @@
     }
 
     .hero-content {
-      max-width: 760px;
+      max-width: 780px;
       width: 100%;
     }
 
-    .tag {
+    .hero-tag {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: 1.5px solid #bfd0e2;
-      padding: 8px 20px;
+      border: 1.5px solid #c9d7e8;
       border-radius: 24px;
+      padding: 8px 20px;
+      background: rgba(255,255,255,0.8);
       color: #173f8a;
-      font-weight: 700;
-      background: rgba(255,255,255,0.7);
-      margin-bottom: 36px;
       font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 34px;
     }
 
     .hero-logo {
-      width: 250px;
-      max-width: 80%;
-      margin-bottom: 28px;
+      width: 260px;
+      margin: 0 auto 28px;
     }
 
-    .hero h2 {
-      font-size: 56px;
-      color: #173f8a;
+    .hero-title {
+      font-size: 58px;
+      line-height: 1.12;
       font-weight: 900;
+      color: #173f8a;
       margin-bottom: 22px;
-      line-height: 1.15;
     }
 
-    .hero h2 .accent {
-      color: #59c2df;
-      border-bottom: 8px solid rgba(89, 194, 223, 0.25);
+    .hero-title .accent {
+      color: #5bc4e0;
+      border-bottom: 8px solid rgba(91, 196, 224, 0.25);
     }
 
-    .hero p {
+    .hero-desc {
+      max-width: 720px;
+      margin: 0 auto 36px;
       font-size: 18px;
-      color: #5a6473;
-      max-width: 700px;
-      margin: 0 auto 34px;
+      color: #5c6778;
       line-height: 1.8;
     }
 
@@ -152,24 +158,31 @@
     }
 
     .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       background: #173f8a;
       color: white;
       padding: 15px 34px;
-      border-radius: 32px;
+      border-radius: 30px;
       font-weight: 700;
-      box-shadow: 0 6px 14px rgba(23, 63, 138, 0.2);
+      box-shadow: 0 8px 20px rgba(23, 63, 138, 0.18);
     }
 
     .btn-secondary {
-      border: 2px solid #59c2df;
-      color: #59c2df;
-      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #58c2df;
+      color: #58c2df;
       padding: 13px 34px;
-      border-radius: 32px;
+      border-radius: 30px;
       font-weight: 700;
+      background: transparent;
     }
 
-    /* Section general */
+    /* General section */
     section {
       padding: 90px 20px;
     }
@@ -179,19 +192,19 @@
       margin: 0 auto;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
-      margin-bottom: 26px;
+      margin-bottom: 16px;
     }
 
-    .section-title h2 {
+    .section-heading h2 {
       font-size: 36px;
       color: #173f8a;
       font-weight: 900;
       margin-bottom: 12px;
     }
 
-    .section-title p {
+    .section-heading p {
       font-size: 18px;
       color: #667085;
     }
@@ -202,72 +215,73 @@
     }
 
     .about .container {
-      max-width: 960px;
+      max-width: 930px;
     }
 
     .about h2 {
       font-size: 34px;
       color: #173f8a;
       font-weight: 900;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .about p {
       font-size: 18px;
-      color: #4a5568;
-      margin-bottom: 26px;
+      color: #4b5563;
+      margin-bottom: 28px;
+      line-height: 1.8;
     }
 
     /* Activities */
     .activities {
-      background: #eef4f9;
+      background: #eff5fa;
     }
 
     .activities-intro {
       max-width: 760px;
-      margin: 0 auto 45px;
+      margin: 0 auto 46px;
       text-align: center;
-      color: #667085;
       font-size: 18px;
+      color: #667085;
     }
 
-    .cards-grid {
+    .activities-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
     }
 
-    .card {
+    .activity-card {
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 24px;
       padding: 34px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       min-height: 250px;
     }
 
     .icon-box {
-      width: 66px;
-      height: 66px;
+      width: 68px;
+      height: 68px;
       border-radius: 18px;
       background: #eaf8fd;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #56bfdc;
-      font-size: 34px;
+      font-size: 32px;
+      color: #5ac0de;
       margin-bottom: 22px;
     }
 
-    .card h3 {
+    .activity-card h3 {
       font-size: 22px;
       color: #173f8a;
       margin-bottom: 14px;
       font-weight: 800;
     }
 
-    .card p {
+    .activity-card p {
       font-size: 17px;
-      color: #5b6677;
+      color: #5a6473;
       line-height: 1.8;
     }
 
@@ -280,7 +294,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 56px;
-      margin-top: 50px;
+      margin-top: 48px;
       align-items: start;
     }
 
@@ -288,23 +302,23 @@
       text-align: center;
     }
 
-    .photo-wrap {
+    .photo-frame {
       width: 230px;
       height: 230px;
       margin: 0 auto 24px;
       border-radius: 50%;
-      background: #dff7fd;
+      background: #dff5fc;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .photo-wrap img {
+    .photo-frame img {
       width: 190px;
       height: 190px;
       object-fit: cover;
       border-radius: 50%;
-      border: 6px solid #53bddc;
+      border: 6px solid #57c2df;
     }
 
     .founder-card h3 {
@@ -315,42 +329,42 @@
     }
 
     .role {
-      color: #56bfdc;
       font-size: 16px;
+      color: #57c2df;
       font-weight: 700;
       margin-bottom: 22px;
     }
 
     .founder-card p {
       text-align: left;
-      color: #4a5568;
-      font-size: 16px;
-      line-height: 1.8;
       max-width: 470px;
       margin: 0 auto;
+      font-size: 16px;
+      color: #4b5563;
+      line-height: 1.8;
     }
 
     /* Contact */
     .contact {
-      background: #eef4f9;
+      background: #eff5fa;
       text-align: center;
     }
 
     .contact-icon {
-      width: 84px;
-      height: 84px;
-      background: #eaf8fd;
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 24px;
       border-radius: 50%;
+      background: #eaf8fd;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #56bfdc;
       font-size: 38px;
-      margin: 0 auto 24px;
+      color: #58c2df;
     }
 
     .contact h2 {
-      font-size: 34px;
+      font-size: 36px;
       color: #173f8a;
       font-weight: 900;
       margin-bottom: 14px;
@@ -359,14 +373,15 @@
     .contact p {
       max-width: 760px;
       margin: 0 auto 30px;
-      color: #556070;
       font-size: 18px;
+      color: #556070;
       line-height: 1.8;
     }
 
     .email-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       background: #173f8a;
       color: white;
@@ -374,22 +389,22 @@
       border-radius: 30px;
       font-size: 18px;
       font-weight: 700;
-      box-shadow: 0 6px 14px rgba(23, 63, 138, 0.2);
+      box-shadow: 0 8px 18px rgba(23, 63, 138, 0.18);
     }
 
     /* Footer */
     footer {
       background: #ffffff;
-      border-top: 1px solid #dbe5ef;
+      border-top: 1px solid #dfe8f2;
       padding: 28px 20px;
     }
 
-    .footer-container {
+    .footer-wrap {
       max-width: 1120px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
     }
@@ -401,46 +416,36 @@
     }
 
     .footer-right {
-      color: #8b95a4;
+      color: #9099a8;
       font-size: 16px;
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       .nav-links {
         display: none;
       }
 
-      .hero h2 {
-        font-size: 42px;
+      .hero-title {
+        font-size: 44px;
       }
 
-      .cards-grid,
+      .activities-grid,
       .founders-grid {
         grid-template-columns: 1fr;
       }
-
-      .photo-wrap {
-        width: 210px;
-        height: 210px;
-      }
-
-      .photo-wrap img {
-        width: 175px;
-        height: 175px;
-      }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .navbar {
         padding: 16px 18px;
       }
 
-      .logo-area h1 {
+      .brand span {
         font-size: 16px;
       }
 
-      .join-btn-top {
+      .top-btn {
         padding: 10px 18px;
         font-size: 14px;
       }
@@ -449,31 +454,38 @@
         padding: 70px 18px;
       }
 
-      .hero h2 {
+      .hero-title {
         font-size: 34px;
       }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      .about h2,
-      .section-title h2,
-      .contact h2 {
-        font-size: 30px;
-      }
-
+      .hero-desc,
       .about p,
       .activities-intro,
       .contact p {
         font-size: 16px;
       }
 
-      .card {
+      .section-heading h2,
+      .about h2,
+      .contact h2 {
+        font-size: 30px;
+      }
+
+      .activity-card {
         padding: 28px;
       }
 
-      .footer-container {
+      .photo-frame {
+        width: 210px;
+        height: 210px;
+      }
+
+      .photo-frame img {
+        width: 175px;
+        height: 175px;
+      }
+
+      .footer-wrap {
         flex-direction: column;
         text-align: center;
       }
@@ -484,9 +496,9 @@
 
   <header>
     <div class="navbar">
-      <div class="logo-area">
+      <div class="brand">
         <img src="logo.png" alt="E-Talk Club Logo">
-        <h1>E-Talk Club</h1>
+        <span>E-Talk Club</span>
       </div>
 
       <nav class="nav-links">
@@ -496,26 +508,28 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a href="#contact" class="join-btn-top">Join Us</a>
+      <a href="#contact" class="top-btn">Join Us</a>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <div class="tag">✩ Student-led Volunteer Organization</div>
+      <div class="hero-tag">✩ Student-led Volunteer Organization</div>
 
       <img src="logo.png" alt="E-Talk Club Logo" class="hero-logo">
 
-      <h2>Speak. Share. <span class="accent">Grow.</span></h2>
+      <h1 class="hero-title">
+        Speak. Share. <span class="accent">Grow.</span>
+      </h1>
 
-      <p>
+      <p class="hero-desc">
         E-Talk Club is a student-led volunteer organization dedicated to helping
         younger students improve their English speaking skills through conversation,
         guidance, and interactive learning.
       </p>
 
       <div class="hero-buttons">
-        <a href="#about" class="btn-primary">Learn More</a>
+        <a href="#about" class="btn-primary">Learn More ›</a>
         <a href="#contact" class="btn-secondary">Join Us</a>
       </div>
     </div>
@@ -542,7 +556,7 @@
 
   <section class="activities" id="activities">
     <div class="container">
-      <div class="section-title">
+      <div class="section-heading">
         <h2>What We Do</h2>
       </div>
 
@@ -550,8 +564,8 @@
         We focus on practical, engaging, and supportive methods to help students thrive.
       </div>
 
-      <div class="cards-grid">
-        <div class="card">
+      <div class="activities-grid">
+        <div class="activity-card">
           <div class="icon-box">🗨</div>
           <h3>English Conversation Practice</h3>
           <p>
@@ -560,7 +574,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="activity-card">
           <div class="icon-box">☆</div>
           <h3>Confidence Building</h3>
           <p>
@@ -569,7 +583,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="activity-card">
           <div class="icon-box">👥</div>
           <h3>Interactive Activities</h3>
           <p>
@@ -578,7 +592,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="activity-card">
           <div class="icon-box">🤝</div>
           <h3>Volunteer Service</h3>
           <p>
@@ -592,14 +606,14 @@
 
   <section class="founders" id="founders">
     <div class="container">
-      <div class="section-title">
+      <div class="section-heading">
         <h2>Founders & Leadership</h2>
         <p>Meet the passionate students behind E-Talk Club.</p>
       </div>
 
       <div class="founders-grid">
         <div class="founder-card">
-          <div class="photo-wrap">
+          <div class="photo-frame">
             <img src="ivy.jpeg" alt="Yiwen Ivy Chen">
           </div>
           <h3>Yiwen (Ivy) Chen</h3>
@@ -608,23 +622,23 @@
             Ivy is the President and Founder of E-Talk Club. She is responsible
             for the club's overall planning, activity design, communication, and
             leadership. She founded E-Talk Club to create a supportive space where
-            younger students can practice spoken English, build confidence, and
-            enjoy learning through real conversations.
+            younger students can practice spoken English, build confidence, and enjoy
+            learning through real conversations.
           </p>
         </div>
 
         <div class="founder-card">
-          <div class="photo-wrap">
+          <div class="photo-frame">
             <img src="kevin.jpeg" alt="Yifan Kevin Wu">
           </div>
           <h3>Yifan (Kevin) Wu</h3>
           <div class="role">Vice President</div>
           <p>
             Kevin is the Vice President of E-Talk Club. He takes a leadership role
-            in organizing club activities, coordinating volunteer work, and
-            supporting younger students during English speaking sessions. With
-            patience, responsibility, and strong teamwork, Kevin helps guide both
-            volunteers and participants in a welcoming learning environment.
+            in organizing club activities, coordinating volunteer work, and supporting
+            younger students during English speaking sessions. With patience,
+            responsibility, and strong teamwork, Kevin helps guide both volunteers and
+            participants in a welcoming learning environment.
           </p>
         </div>
       </div>
@@ -640,14 +654,14 @@
         We'd love to hear from you.
       </p>
 
-      <a class="email-btn" href="mailto:cywivy86@gmail.com">
+      <a href="mailto:cywivy86@gmail.com" class="email-btn">
         ✉ cywivy86@gmail.com
       </a>
     </div>
   </section>
 
   <footer>
-    <div class="footer-container">
+    <div class="footer-wrap">
       <div class="footer-left">🎧 E-Talk Club</div>
       <div class="footer-right">© 2026 E-Talk Club. All Rights Reserved.</div>
     </div>
