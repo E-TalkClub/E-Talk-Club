@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>E-Talk Club</title>
 
   <style>
@@ -71,7 +72,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 28px;
     }
 
     .nav-links a {
@@ -124,7 +125,7 @@
     }
 
     .hero-logo {
-      width: 300px; /* 改小一点 */
+      width: 300px;
       max-width: 80%;
       margin: 0 auto 34px;
       background: transparent;
@@ -132,7 +133,7 @@
     }
 
     .hero-title {
-      font-size: 34px; /* 跟 Why 那一行一样大 */
+      font-size: 34px;
       line-height: 1.2;
       font-weight: 900;
       color: #173f8a;
@@ -295,15 +296,56 @@
       line-height: 1.8;
     }
 
-    .founders {
+    .team {
       background: #ffffff;
     }
 
-    .founders-grid {
+    .team-intro {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+      font-size: 18px;
+      color: #667085;
+    }
+
+    .team-block {
+      margin-bottom: 70px;
+    }
+
+    .team-block-title {
+      font-size: 28px;
+      color: #173f8a;
+      font-weight: 900;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .advisor-card {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #f7fbff;
+      border: 1px solid #dfe8f2;
+      border-radius: 24px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .advisor-card h3 {
+      color: #173f8a;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .advisor-card p {
+      color: #5a6473;
+      font-size: 17px;
+    }
+
+    .executive-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 56px;
-      margin-top: 48px;
       align-items: start;
     }
 
@@ -351,6 +393,75 @@
       font-size: 16px;
       color: #4b5563;
       line-height: 1.8;
+    }
+
+    .kevin-links {
+      max-width: 470px;
+      margin: 22px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .kevin-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #173f8a;
+      background: #eaf8fd;
+      border: 1px solid #c8eef7;
+    }
+
+    .feedback-box {
+      max-width: 470px;
+      margin: 24px auto 0;
+      padding: 22px;
+      background: #f7fbff;
+      border-left: 5px solid #57c2df;
+      border-radius: 18px;
+      text-align: left;
+      color: #4b5563;
+      font-size: 15.5px;
+      line-height: 1.8;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .feedback-box strong {
+      color: #173f8a;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .departments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .department-card {
+      background: #f7fbff;
+      border: 1px solid #dfe8f2;
+      border-radius: 22px;
+      padding: 28px;
+      min-height: 170px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .department-card h3 {
+      color: #173f8a;
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .department-card p {
+      color: #5a6473;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
     .contact {
@@ -450,7 +561,8 @@
       }
 
       .activities-grid,
-      .founders-grid {
+      .executive-grid,
+      .departments-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -485,6 +597,7 @@
       .hero-desc,
       .about p,
       .activities-intro,
+      .team-intro,
       .contact p {
         font-size: 16px;
       }
@@ -495,7 +608,9 @@
         font-size: 30px;
       }
 
-      .activity-card {
+      .activity-card,
+      .advisor-card,
+      .department-card {
         padding: 28px;
       }
 
@@ -529,7 +644,7 @@
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#activities">Activities</a>
-        <a href="#founders">Founders</a>
+        <a href="#team">Our Team</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -651,48 +766,130 @@
     </div>
   </section>
 
-  <section class="founders" id="founders">
+  <section class="team" id="team">
     <div class="container">
       <div class="section-heading">
-        <h2>Founders & Leadership</h2>
-        <p>Meet the passionate students behind E-Talk Club.</p>
+        <h2>Our Team</h2>
+        <p>The people and departments behind E-Talk Club.</p>
       </div>
 
-      <div class="founders-grid">
-        <div class="founder-card">
-          <div class="photo-frame">
-            <img src="ivy.jpeg" alt="Yiwen Ivy Chen">
-          </div>
+      <p class="team-intro">
+        E-Talk Club is supported by student leaders, department members, and a school teacher advisor.
+        Together, our team plans activities, supports volunteers, and creates a positive learning environment
+        for students.
+      </p>
 
-          <h3>Yiwen (Ivy) Chen</h3>
-          <div class="role">President</div>
+      <div class="team-block">
+        <h2 class="team-block-title">Faculty Advisor</h2>
 
+        <div class="advisor-card">
+          <h3>School Teacher Advisor</h3>
           <p>
-            Ivy is the President and Founder of E-Talk Club. She is responsible
-            for the club's overall planning, activity design, communication, and
-            leadership. She founded E-Talk Club to create a supportive space where
-            younger students can practice spoken English, build confidence, and enjoy
-            learning through real conversations.
-          </p>
-        </div>
-
-        <div class="founder-card">
-          <div class="photo-frame">
-            <img src="kevin.jpeg" alt="Yifan Kevin Wu">
-          </div>
-
-          <h3>Yifan (Kevin) Wu</h3>
-          <div class="role">Vice President</div>
-
-          <p>
-            Kevin is the Vice President of E-Talk Club. He takes a leadership role
-            in organizing club activities, coordinating volunteer work, and supporting
-            younger students during English speaking sessions. With patience,
-            responsibility, and strong teamwork, Kevin helps guide both volunteers and
-            participants in a welcoming learning environment.
+            Our school teacher advisor provides guidance, support, and supervision to help ensure that
+            E-Talk Club activities are organized responsibly and aligned with the club’s educational purpose.
           </p>
         </div>
       </div>
+
+      <div class="team-block">
+        <h2 class="team-block-title">Executive Team</h2>
+
+        <div class="executive-grid">
+          <div class="founder-card">
+            <div class="photo-frame">
+              <img src="ivy.jpeg" alt="Yiwen Ivy Chen">
+            </div>
+
+            <h3>Yiwen (Ivy) Chen</h3>
+            <div class="role">President</div>
+
+            <p>
+              Ivy is the President and Founder of E-Talk Club. She is responsible
+              for the club's overall planning, activity design, communication, and
+              leadership. She founded E-Talk Club to create a supportive space where
+              younger students can practice spoken English, build confidence, and enjoy
+              learning through real conversations.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <div class="photo-frame">
+              <img src="kevin.jpeg" alt="Yifan Kevin Wu">
+            </div>
+
+            <h3>Yifan (Kevin) Wu</h3>
+            <div class="role">Vice President</div>
+
+            <p>
+              Kevin is the Vice President of E-Talk Club. He takes a leadership role
+              in organizing club activities, coordinating volunteer work, and supporting
+              younger students during English speaking sessions. With patience,
+              responsibility, and strong teamwork, Kevin helps guide both volunteers and
+              participants in a welcoming learning environment.
+            </p>
+
+            <div class="kevin-links">
+              <a href="mailto:712kevinwu@gmail.com">Email Kevin</a>
+              <a href="mailto:712kevinwu@gmail.com?subject=E-Talk Club Session Booking">Book a Session</a>
+            </div>
+
+            <div class="feedback-box">
+              <strong>Student Feedback</strong>
+              “Kevin explains ideas clearly and makes speaking practice feel comfortable. His sessions are patient,
+              organized, and encouraging, which helps students feel more confident when using English.”
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-block">
+        <h2 class="team-block-title">Departments</h2>
+
+        <div class="departments-grid">
+          <div class="department-card">
+            <h3>Events Department</h3>
+            <p>
+              Plans club sessions, speaking activities, discussion themes, and special events for students.
+            </p>
+          </div>
+
+          <div class="department-card">
+            <h3>Academic & Training Department</h3>
+            <p>
+              Designs learning materials, speaking practice topics, and volunteer training support.
+            </p>
+          </div>
+
+          <div class="department-card">
+            <h3>Media & Marketing Department</h3>
+            <p>
+              Manages club promotion, visual content, announcements, and online communication.
+            </p>
+          </div>
+
+          <div class="department-card">
+            <h3>Membership Department</h3>
+            <p>
+              Supports member registration, communication, volunteer organization, and participation records.
+            </p>
+          </div>
+
+          <div class="department-card">
+            <h3>Outreach & Partnerships</h3>
+            <p>
+              Builds connections with students, families, schools, and community partners.
+            </p>
+          </div>
+
+          <div class="department-card">
+            <h3>Teaching Support</h3>
+            <p>
+              Helps volunteers prepare for speaking sessions and supports students during practice.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
