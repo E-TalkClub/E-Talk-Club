@@ -17,12 +17,15 @@
         <span>E-Talk Club</span>
       </a>
 
-      <nav class="nav-links">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="programs.html">Programs</a>
         <a href="story.html">Our Story</a>
         <a href="team.html" class="active">Our Team</a>
         <a href="contact.html">Contact</a>
+        <a href="contact.html" class="mobile-join">Join Us</a>
       </nav>
 
       <a href="contact.html" class="top-btn">Join Us</a>
@@ -182,6 +185,12 @@
       <div class="footer-right">© 2026 E-Talk Club. All Rights Reserved.</div>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
