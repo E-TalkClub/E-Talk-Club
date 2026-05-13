@@ -11,8 +11,8 @@
   --light-blue: #eef8ff;
   --soft-blue: #f6fbff;
   --pale-blue: #eaf4fb;
-  --footer-blue: #2b6fb3;
-  --footer-blue-light: #57c4e3;
+  --footer-blue: #57c4e3;
+  --footer-blue-light: #8bd8ec;
   --text: #4b5563;
   --muted: #667085;
   --border: #dfe8f2;
@@ -656,7 +656,7 @@ section {
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(135deg, #2b6fb3 0%, #3b8ed0 55%, #57c4e3 100%);
+  background: linear-gradient(135deg, #57c4e3 0%, #6ccbe7 55%, #8bd8ec 100%);
   color: #ffffff;
   padding: 58px 20px 28px;
 }
@@ -681,7 +681,7 @@ section {
   font-size: 15px;
   line-height: 1.8;
   max-width: 340px;
-  color: #f4fbff;
+  color: #f7fdff;
 }
 
 .footer-col h3 {
@@ -694,7 +694,7 @@ section {
 .footer-col a,
 .footer-col p {
   display: block;
-  color: #f4fbff;
+  color: #f7fdff;
   font-size: 15px;
   margin-bottom: 9px;
 }
@@ -708,12 +708,12 @@ section {
   max-width: 1120px;
   margin: 50px auto 0;
   padding-top: 22px;
-  border-top: 1px solid rgba(244, 251, 255, 0.45);
+  border-top: 1px solid rgba(247, 253, 255, 0.55);
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  color: #f4fbff;
+  color: #f7fdff;
   font-size: 15px;
 }
 
@@ -724,7 +724,7 @@ section {
 }
 
 .footer-bottom-links a {
-  color: #f4fbff;
+  color: #f7fdff;
 }
 
 .footer-bottom-links a:hover {
