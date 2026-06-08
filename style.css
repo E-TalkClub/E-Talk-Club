@@ -378,6 +378,130 @@ section {
   line-height: 1.8;
 }
 
+/* Speaking Levels */
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.level-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 34px 30px;
+  box-shadow: 0 6px 18px rgba(23, 63, 138, 0.06);
+}
+
+.level-label {
+  display: inline-block;
+  background: #eaf8fd;
+  color: var(--navy);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.level-card h3 {
+  font-size: 22px;
+  color: var(--navy);
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.level-goal {
+  color: var(--sky);
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.level-card p {
+  color: #5a6473;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Process */
+.process-wrapper {
+  margin-top: 42px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 38px;
+  box-shadow: 0 6px 18px rgba(23, 63, 138, 0.06);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.process-step {
+  text-align: center;
+  padding: 18px 12px;
+  border-radius: 20px;
+  background: #f7fbff;
+}
+
+.step-number {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.process-step h3 {
+  font-size: 16px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  font-size: 14px;
+  color: #5a6473;
+  line-height: 1.6;
+}
+
+/* Signature Programs */
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.signature-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(23, 63, 138, 0.06);
+}
+
+.signature-card h3 {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.signature-card p {
+  color: #5a6473;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
 /* About / Team */
 .team-block {
   margin-bottom: 78px;
@@ -512,6 +636,29 @@ section {
 
 .advisor-card p,
 .tutor-card p {
+  color: #5a6473;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.tutor-growth {
+  max-width: 780px;
+  margin: 28px auto 0;
+  background: var(--white);
+  border-left: 5px solid var(--sky);
+  border-radius: 20px;
+  padding: 28px 34px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(23, 63, 138, 0.05);
+}
+
+.tutor-growth h3 {
+  color: var(--navy);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.tutor-growth p {
   color: #5a6473;
   font-size: 17px;
   line-height: 1.8;
@@ -756,12 +903,18 @@ section {
 
 /* Responsive */
 @media (max-width: 950px) {
-  .footer-grid {
+  .footer-grid,
+  .level-grid,
+  .signature-grid {
     grid-template-columns: 1fr;
   }
 
   .contact-options,
   .departments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
     grid-template-columns: 1fr;
   }
 }
@@ -873,7 +1026,11 @@ section {
   .department-card,
   .tutor-card,
   .contact-card,
-  .program-cta {
+  .program-cta,
+  .level-card,
+  .signature-card,
+  .process-wrapper,
+  .tutor-growth {
     padding: 28px;
   }
 
